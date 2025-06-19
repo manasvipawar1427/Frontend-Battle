@@ -1,0 +1,143 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9fafb;
+  color: #111827;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: #0f172a;
+  color: white;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  position: relative;
+  background: linear-gradient(to bottom, #1e293b, #334155);
+  color: white;
+}
+.hero .ratings {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+.hero .hoverable {
+  color: #93c5fd;
+  cursor: pointer;
+  position: relative;
+}
+.hero .btn {
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  background: #3b82f6;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.hero .subtext {
+  font-style: italic;
+  margin: 0.5rem 0;
+}
+
+.dashboard-preview {
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100%;
+  margin-top: 10px;
+  z-index: 10;
+}
+.dashboard-preview img {
+  width: 350px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.dashboard-preview.show {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.carousel {
+  background: #e2e8f0;
+  padding: 2rem;
+  text-align: center;
+}
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.card {
+  position: relative;
+  width: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.card img {
+  width: 100%;
+  transition: 0.3s ease;
+}
+.card img.after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.card:hover img.after {
+  opacity: 1;
+}
+
+.brand-kits {
+  padding: 2rem;
+  background: #f1f5f9;
+}
+.brand-card {
+  background: #111827;
+  color: white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 12px;
+}
+.brand-card.selected {
+  border: 2px solid #6366f1;
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.red { background: #ef4444; }
+.green { background: #10b981; }
+.white { background: #f9fafb; }
+
+.footer {
+  background: #0f172a;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
